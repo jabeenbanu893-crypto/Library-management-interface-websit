@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="home">
+    <h1>Library Management System</h1>
+    <h2>Welcome to Our Library</h2>
+    <p>Find your favourite books easily!</p>
+    <p>Read Books - Gain Knowledge</p>
+    <button onclick="showPage('list')">Start</button>
+</div>
+
+<div class="container" id="list">
+    <h1>Book List</h1>
+    <div class="book">1. Python</div>
+    <div class="book">2. Java</div>
+    <div class="book">3. HTML</div>
+    <div class="book">4. CSS</div>
+    <div class="book">5. Computer Networks</div>
+    <button onclick="showPage('search')">Next</button>
+</div>
+
+<div class="container" id="search">
+    <h1>Search Books</h1>
+    <input type="text" id="searchBox"
+           placeholder="Enter book name">
+    <button onclick="searchBook()">Search</button>
+    <p id="result"></p>
+</div>
+
+<div class="container" id="details">
+    <h1>Book Details</h1>
+    <h2>Python Programming</h2>
+    <p>Author: Guido van Rossum</p>
+    <p>Category: Programming</p>
+    <p id="availability">Availability: Available</p>
+    <button onclick="showPage('issue')">
+        Check Availability
+    </button>
+</div>
+
+<div class="container" id="issue">
+    <h1>Issue Book</h1>
+    <p>Book Name: Python</p>
+    <p>Student Name: Student</p>
+    <button onclick="issueBook()">Issue Book</button>
+</div>
+
+<div class="container" id="return">
+    <h1>Return Book</h1>
+    <p>Book Name: Python</p>
+    <p>Student Name: Student</p>
+    <button onclick="returnBook()">Return Book</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
