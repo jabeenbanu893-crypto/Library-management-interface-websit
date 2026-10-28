@@ -1,0 +1,55 @@
+let books = [
+    "Python",
+    "Java",
+    "HTML",
+    "CSS",
+    "Computer Networks"
+];
+
+function showPage(page) {
+
+    document.querySelectorAll(".container")
+        .forEach(p => p.style.display = "none");
+
+    document.getElementById(page).style.display = "block";
+}
+
+function searchBook() {
+
+    let name = document.getElementById("searchBox")
+        .value.toLowerCase();
+
+    let result = books.find(book =>
+        book.toLowerCase() === name
+    );
+
+    if (result) {
+        document.getElementById("result").innerHTML =
+            result + " found!";
+
+        showPage("details");
+    } else {
+        document.getElementById("result").innerHTML =
+            "Book not found";
+    }
+}
+
+function issueBook() {
+
+    document.getElementById("availability").innerHTML =
+        "Availability: Issued";
+
+    alert("Book Issued Successfully!");
+
+    showPage("return");
+}
+
+function returnBook() {
+
+    document.getElementById("availability").innerHTML =
+        "Availability: Available";
+
+    alert("Book Returned Successfully!");
+
+    showPage("details");
+}
