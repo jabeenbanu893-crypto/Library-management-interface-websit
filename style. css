@@ -1,0 +1,51 @@
+body {
+    font-family: Arial;
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.book {
+    background-color: lightyellow;
+    padding: 15px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+#list, #search, #details, #issue, #return {
+    display: none;
+}
